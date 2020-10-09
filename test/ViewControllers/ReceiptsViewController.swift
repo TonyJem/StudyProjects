@@ -10,7 +10,6 @@ import UIKit
 
 class ReceiptsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    
     @IBOutlet var receiptsTableView: UITableView!
     
     var receiptsImages = [
@@ -28,16 +27,17 @@ class ReceiptsViewController: UIViewController, UITableViewDataSource, UITableVi
         loadTable()
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "rowCellTappedSegue"){
-            let pictureToShowVC = segue.destination as! ImageEggViewController
+        if segue.identifier == "rowCellTappedSegue" {
+            let imageVC = segue.destination as! ImageEggViewController
             print("segue is working!")
             
-//            pictureToShowVC.imageEgg.image = UIImage(named: "zzzEgg")
+//            let indexPath = receiptsTableView.indexPathForSelectedRow!
+//            let imageToShow = receiptsImages[indexPath.row]
+            
+            imageVC.imageEgg.image = UIImage(named: "redEgg")
         }
     }
-    
     
     // MARK: - TableSetup:
     func loadTable() {
@@ -57,15 +57,4 @@ class ReceiptsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         return receiptCell
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
