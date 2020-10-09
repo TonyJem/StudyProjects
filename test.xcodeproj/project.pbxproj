@@ -15,6 +15,8 @@
 		3A8F116F25262C84002AA5C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F116D25262C84002AA5C1 /* LaunchScreen.storyboard */; };
 		3A8F117825264DDE002AA5C1 /* RobotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F117725264DDE002AA5C1 /* RobotViewController.swift */; };
 		3A8F119C25308C39002AA5C1 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F119B25308C39002AA5C1 /* ControlsViewController.swift */; };
+		C207C3FF2530D98000EEEDCC /* ReceiptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207C3FE2530D98000EEEDCC /* ReceiptsViewController.swift */; };
+		C207C4032530DAC300EEEDCC /* ReceiptTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207C4022530DAC300EEEDCC /* ReceiptTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		3A8F117025262C84002AA5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A8F117725264DDE002AA5C1 /* RobotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotViewController.swift; sourceTree = "<group>"; };
 		3A8F119B25308C39002AA5C1 /* ControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
+		C207C3FE2530D98000EEEDCC /* ReceiptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsViewController.swift; sourceTree = "<group>"; };
+		C207C4022530DAC300EEEDCC /* ReceiptTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		3A8F116125262C82002AA5C1 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				C207C4012530DA9200EEEDCC /* Views */,
 				3A8F117625264095002AA5C1 /* ViewControllers */,
 				3A8F116225262C82002AA5C1 /* AppDelegate.swift */,
 				3A8F116425262C82002AA5C1 /* SceneDelegate.swift */,
@@ -77,8 +82,17 @@
 				3A8F116625262C82002AA5C1 /* RootViewController.swift */,
 				3A8F117725264DDE002AA5C1 /* RobotViewController.swift */,
 				3A8F119B25308C39002AA5C1 /* ControlsViewController.swift */,
+				C207C3FE2530D98000EEEDCC /* ReceiptsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C207C4012530DA9200EEEDCC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C207C4022530DAC300EEEDCC /* ReceiptTableCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8F116725262C82002AA5C1 /* RootViewController.swift in Sources */,
+				C207C3FF2530D98000EEEDCC /* ReceiptsViewController.swift in Sources */,
+				C207C4032530DAC300EEEDCC /* ReceiptTableCell.swift in Sources */,
 				3A8F117825264DDE002AA5C1 /* RobotViewController.swift in Sources */,
 				3A8F116325262C82002AA5C1 /* AppDelegate.swift in Sources */,
 				3A8F119C25308C39002AA5C1 /* ControlsViewController.swift in Sources */,
