@@ -28,6 +28,17 @@ class ReceiptsViewController: UIViewController, UITableViewDataSource, UITableVi
         loadTable()
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "rowCellTappedSegue"){
+            let pictureToShowVC = segue.destination as! ImageEggViewController
+            print("segue is working!")
+            
+//            pictureToShowVC.imageEgg.image = UIImage(named: "zzzEgg")
+        }
+    }
+    
+    
     // MARK: - TableSetup:
     func loadTable() {
         receiptsTableView.dataSource = self
