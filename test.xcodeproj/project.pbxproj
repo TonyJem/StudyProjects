@@ -14,6 +14,7 @@
 		3A8F116C25262C84002AA5C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F116B25262C84002AA5C1 /* Assets.xcassets */; };
 		3A8F116F25262C84002AA5C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F116D25262C84002AA5C1 /* LaunchScreen.storyboard */; };
 		3A8F117825264DDE002AA5C1 /* RobotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F117725264DDE002AA5C1 /* RobotViewController.swift */; };
+		3A8F119C25308C39002AA5C1 /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F119B25308C39002AA5C1 /* ControlsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3A8F116E25262C84002AA5C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8F117025262C84002AA5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A8F117725264DDE002AA5C1 /* RobotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotViewController.swift; sourceTree = "<group>"; };
+		3A8F119B25308C39002AA5C1 /* ControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,9 @@
 		3A8F117625264095002AA5C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3A8F117725264DDE002AA5C1 /* RobotViewController.swift */,
 				3A8F116625262C82002AA5C1 /* RootViewController.swift */,
+				3A8F117725264DDE002AA5C1 /* RobotViewController.swift */,
+				3A8F119B25308C39002AA5C1 /* ControlsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				3A8F116725262C82002AA5C1 /* RootViewController.swift in Sources */,
 				3A8F117825264DDE002AA5C1 /* RobotViewController.swift in Sources */,
 				3A8F116325262C82002AA5C1 /* AppDelegate.swift in Sources */,
+				3A8F119C25308C39002AA5C1 /* ControlsViewController.swift in Sources */,
 				3A8F116525262C82002AA5C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

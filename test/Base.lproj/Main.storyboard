@@ -72,33 +72,58 @@
             </objects>
             <point key="canvasLocation" x="920.28985507246387" y="147.99107142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Controls View Controller-->
         <scene sceneID="Kd6-yL-xfx">
             <objects>
-                <viewController id="z6I-98-zhL" sceneMemberID="viewController">
+                <viewController id="z6I-98-zhL" customClass="ControlsViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N0B-JX-yJe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lecture Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfs-jj-rbh">
-                                <rect key="frame" x="160" y="437.5" width="94" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCI-nE-uHB">
+                                <rect key="frame" x="20" y="118" width="374" height="30"/>
+                                <state key="normal" title="Print &quot;Hello World!&quot;"/>
+                                <connections>
+                                    <action selector="printHelloWorldButtonTapped:" destination="z6I-98-zhL" eventType="touchUpInside" id="AxI-z0-NJe"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Ke1-L3-dbD">
+                                <rect key="frame" x="20" y="173" width="374" height="105"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki6-NC-0kk">
+                                        <rect key="frame" x="81" y="0.0" width="212" height="30"/>
+                                        <state key="normal" title="Check Switch and Apply Color "/>
+                                        <connections>
+                                            <action selector="checkSwitchBtnTapped:" destination="z6I-98-zhL" eventType="touchUpInside" id="S7x-01-avA"/>
+                                        </connections>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CVM-5B-Ff4">
+                                        <rect key="frame" x="162.5" y="74" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kfs-jj-rbh" firstAttribute="centerY" secondItem="N0B-JX-yJe" secondAttribute="centerY" id="siG-L2-1YE"/>
-                            <constraint firstItem="kfs-jj-rbh" firstAttribute="centerX" secondItem="N0B-JX-yJe" secondAttribute="centerX" id="tAY-zH-odN"/>
+                            <constraint firstItem="Ke1-L3-dbD" firstAttribute="top" secondItem="tCI-nE-uHB" secondAttribute="bottom" constant="25" id="Isu-I4-7Pn"/>
+                            <constraint firstItem="Ke1-L3-dbD" firstAttribute="leading" secondItem="noG-96-4zU" secondAttribute="leading" constant="20" id="KOw-aB-q7a"/>
+                            <constraint firstItem="noG-96-4zU" firstAttribute="trailing" secondItem="tCI-nE-uHB" secondAttribute="trailing" constant="20" id="btt-uz-lTF"/>
+                            <constraint firstItem="Ke1-L3-dbD" firstAttribute="centerX" secondItem="N0B-JX-yJe" secondAttribute="centerX" id="eib-0m-Fkz"/>
+                            <constraint firstItem="tCI-nE-uHB" firstAttribute="leading" secondItem="noG-96-4zU" secondAttribute="leading" constant="20" id="hWa-3t-tEl"/>
+                            <constraint firstItem="noG-96-4zU" firstAttribute="trailing" secondItem="Ke1-L3-dbD" secondAttribute="trailing" constant="20" id="mww-6c-HBG"/>
+                            <constraint firstItem="tCI-nE-uHB" firstAttribute="top" secondItem="noG-96-4zU" secondAttribute="top" constant="30" id="si7-Xh-nGc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="noG-96-4zU"/>
                     </view>
                     <navigationItem key="navigationItem" id="ykz-uR-UYI"/>
+                    <connections>
+                        <outlet property="colorChangeSwitch" destination="CVM-5B-Ff4" id="c55-Eo-yK1"/>
+                        <outlet property="screenView" destination="N0B-JX-yJe" id="gnC-Vr-oeG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tt-wU-9gZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="148"/>
+            <point key="canvasLocation" x="1870" y="165"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NAj-kT-ZGS">
