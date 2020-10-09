@@ -13,20 +13,20 @@ class ReceiptsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet var receiptsTableView: UITableView!
     
-    var receiptsImages = [UIImage(named: "white"), UIImage(named: "yellow"), UIImage(named: "blue")]
-
+    var receiptsImages = [
+        UIImage(named: "zzzEgg"),
+        UIImage(named: "whiteEgg"),
+        UIImage(named: "blueEgg"),
+        UIImage(named: "yellowEgg"),
+        UIImage(named: "orangeEgg"),
+        UIImage(named: "redEgg"),
+    ]
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadTable()
     }
-    
-    
-
-    
-
     
     // MARK: - TableSetup:
     func loadTable() {
@@ -47,19 +47,14 @@ class ReceiptsViewController: UIViewController, UITableViewDataSource, UITableVi
         return receiptCell
     }
     
-    
-    
-    
-    
-    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
