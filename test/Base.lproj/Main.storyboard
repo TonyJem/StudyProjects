@@ -25,7 +25,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lecture One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbb-3C-bNO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lecture Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbb-3C-bNO">
                                                     <rect key="frame" x="20" y="11" width="94" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -45,8 +45,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lecture Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtg-Fv-ncm">
-                                                    <rect key="frame" x="20" y="11" width="94" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lecture Three" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtg-Fv-ncm">
+                                                    <rect key="frame" x="20" y="11" width="107" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -103,7 +103,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UvX-rr-obZ">
-                                <rect key="frame" x="20" y="299" width="374" height="232.5"/>
+                                <rect key="frame" x="20" y="299" width="374" height="323"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hZg-0Y-BBJ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -169,8 +169,21 @@
                                             <action selector="sayGreetingBtnTapped:" destination="z6I-98-zhL" eventType="touchUpInside" id="Zuc-fJ-cY7"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqa-gC-tAc">
+                                        <rect key="frame" x="86.5" y="212" width="201" height="30"/>
+                                        <state key="normal" title="Check if can drink Margaritas"/>
+                                        <connections>
+                                            <action selector="checkIfCanDrinkMargaritasBtnTapped:" destination="z6I-98-zhL" eventType="touchUpInside" id="MFu-pD-ZwX"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greetings text here..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1d-iz-RuA">
-                                        <rect key="frame" x="0.0" y="212" width="374" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="262" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alowance to drink Margaritas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teg-Jy-jDW">
+                                        <rect key="frame" x="76" y="302.5" width="222.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -206,6 +219,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="ykz-uR-UYI"/>
                     <connections>
+                        <outlet property="ageTextField" destination="reu-eE-L31" id="Sur-mS-CDJ"/>
+                        <outlet property="allowanceLabel" destination="teg-Jy-jDW" id="78B-yY-8R4"/>
                         <outlet property="colorChangeSwitch" destination="CVM-5B-Ff4" id="c55-Eo-yK1"/>
                         <outlet property="greetingsTextLabel" destination="b1d-iz-RuA" id="Hr6-Gj-Hjq"/>
                         <outlet property="nameTextField" destination="JL3-pc-XOO" id="EY2-y4-P8g"/>
