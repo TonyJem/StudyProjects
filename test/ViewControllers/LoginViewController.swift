@@ -1,30 +1,37 @@
-//
-//  LoginViewController.swift
-//  test
-//
-//  Created by Anton on 2020-10-10.
-//  Copyright © 2020 Tony Jem. All rights reserved.
-//
-
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    // MARK: - Properties:
+    let correctPassword = "pas"
+    
+    // MARK: - Outlets:
+    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
+    // MARK: - StartHere:
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        usernameTextField.text = ""
+        passwordTextField.text = ""
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Methods:
+    func passwordIsCorrect() -> Bool{
+        if passwordTextField.text == correctPassword {
+            return true
+        } else {
+            return false
+        }
     }
-    */
-
+    
+    
+    // MARK: - Actions:
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        if passwordIsCorrect(){
+            print("login OK")
+        } else {
+            print("Password is not correct")
+        }
+    }
+    
 }
