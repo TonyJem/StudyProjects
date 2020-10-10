@@ -19,6 +19,7 @@
 		C207C3FF2530D98000EEEDCC /* ReceiptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207C3FE2530D98000EEEDCC /* ReceiptsViewController.swift */; };
 		C207C4032530DAC300EEEDCC /* ReceiptTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207C4022530DAC300EEEDCC /* ReceiptTableCell.swift */; };
 		C207C4082531C46E00EEEDCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207C4072531C46E00EEEDCC /* LoginViewController.swift */; };
+		C207C40B2531C51900EEEDCC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207C40A2531C51900EEEDCC /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C207C3FE2530D98000EEEDCC /* ReceiptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsViewController.swift; sourceTree = "<group>"; };
 		C207C4022530DAC300EEEDCC /* ReceiptTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableCell.swift; sourceTree = "<group>"; };
 		C207C4072531C46E00EEEDCC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C207C40A2531C51900EEEDCC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				C207C3FE2530D98000EEEDCC /* ReceiptsViewController.swift */,
 				3A8F119D2530FA13002AA5C1 /* ImageEggViewController.swift */,
 				C207C4072531C46E00EEEDCC /* LoginViewController.swift */,
+				C207C40A2531C51900EEEDCC /* WelcomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C207C4082531C46E00EEEDCC /* LoginViewController.swift in Sources */,
+				C207C40B2531C51900EEEDCC /* WelcomeViewController.swift in Sources */,
 				3A8F116725262C82002AA5C1 /* RootViewController.swift in Sources */,
 				C207C3FF2530D98000EEEDCC /* ReceiptsViewController.swift in Sources */,
 				C207C4032530DAC300EEEDCC /* ReceiptTableCell.swift in Sources */,
