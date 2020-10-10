@@ -11,6 +11,9 @@ class LoginViewController: UIViewController {
     // MARK: - StartHere:
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         usernameTextField.text = ""
         passwordTextField.text = ""
     }
@@ -24,11 +27,16 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func presentWelcomeViewController(){
+        let welcomeVC = storyboard?.instantiateViewController(identifier: "WelcomeViewController") as! WelcomeViewController
+        navigationController?.pushViewController(welcomeVC, animated: true)
+    }
     
     // MARK: - Actions:
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         if passwordIsCorrect(){
             print("login OK")
+            presentWelcomeViewController()
         } else {
             print("Password is not correct")
         }
