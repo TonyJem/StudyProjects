@@ -1,8 +1,7 @@
 import UIKit
 
 class CardGameViewController: UIViewController {
-    
-    
+    //    MARK: - Outlets
     @IBOutlet var cardButtonsTapped: [UIButton]!
     
     let cardsSymbols = ["🐶","🐱","🐭","🐰","🦊","🐸","🐶","🐱","🐭","🐰","🦊","🐸" ]
@@ -14,14 +13,18 @@ class CardGameViewController: UIViewController {
         setupCardAppearance()
     }
     
-    
     //    MARK: - Actions
     
     @IBAction func cardTapAction(_ sender: UIButton) {
         let cardIndex = cardButtonsTapped.firstIndex(of: sender)!
         let selectedCardSymbol = cardsSymbols[cardIndex]
         
-        
+        UIView.transition(
+            with: sender,
+            duration: 0.3,
+            options: [.transitionFlipFromRight]) {
+        } completion: { _ in
+        }
         
         if lastSelectedCardIndex == -1 {
             lastSelectedCardIndex = cardIndex
@@ -52,7 +55,6 @@ class CardGameViewController: UIViewController {
         }
     }
     
-    
     //    MARK: - Setup
     
     func setupCardAppearance(){
@@ -60,6 +62,4 @@ class CardGameViewController: UIViewController {
             button.layer.cornerRadius = 8
         }
     }
-    
-    
 }
