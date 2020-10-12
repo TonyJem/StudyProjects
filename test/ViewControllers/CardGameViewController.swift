@@ -3,17 +3,41 @@ import UIKit
 class CardGameViewController: UIViewController {
     //    MARK: - Outlets
     @IBOutlet var cardButtonsTapped: [UIButton]!
+    @IBOutlet weak var scoreLabel: UILabel!
     
+    
+    //    MARK: - Properties
     let cardsSymbols = ["🐶","🐱","🐭","🐰","🦊","🐸","🐶","🐱","🐭","🐰","🦊","🐸" ]
     
     var lastSelectedCardIndex = -1
     
+    var curentScore = 0 {
+        didSet{
+            setScoreLabel()
+        }
+    }
+    
+    
+    //    MARK: - StartHere
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCardAppearance()
+        
+        setScoreLabel()
+        
     }
     
+    func setScoreLabel(){
+        scoreLabel.text = "Score: \(curentScore)"
+    }
+    
+    
     //    MARK: - Actions
+    
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        curentScore = 0
+    }
+    
     
     @IBAction func cardTapAction(_ sender: UIButton) {
         let cardIndex = cardButtonsTapped.firstIndex(of: sender)!
@@ -33,12 +57,19 @@ class CardGameViewController: UIViewController {
         } else if lastSelectedCardIndex != cardIndex {
             let lastCardSymbol = cardsSymbols[lastSelectedCardIndex]
             
-            if lastCardSymbol == selectedCardSymbol {
+            if lastCardSymbol == selectedCardSymbol { // Two Cards Matched OK
                 sender.setTitle(selectedCardSymbol, for: .normal)
                 sender.isEnabled = false
+                curentScore += 3
+                
             } else {
                 sender.setTitle(selectedCardSymbol, for: .normal)
                 sender.isEnabled = false
+                
+                curentScore -= 1
+                if curentScore < 0 {
+                    curentScore = 0
+                }
                 
                 let lastCardIndex = lastSelectedCardIndex
                 

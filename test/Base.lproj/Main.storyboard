@@ -604,11 +604,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="cB7-v9-yZI">
-                                <rect key="frame" x="33" y="145" width="348" height="606"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cB7-v9-yZI">
+                                <rect key="frame" x="33" y="89" width="348" height="718"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4N-94-i5c">
+                                        <rect key="frame" x="0.0" y="0.0" width="348" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="F99-tn-1Jn">
-                                        <rect key="frame" x="0.0" y="0.0" width="348" height="120"/>
+                                        <rect key="frame" x="0.0" y="66" width="348" height="120"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4E-sW-hOg">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
@@ -649,7 +655,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="JZg-Na-eoa">
-                                        <rect key="frame" x="0.0" y="162" width="348" height="120"/>
+                                        <rect key="frame" x="0.0" y="216" width="348" height="120"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7K-xN-O20">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
@@ -690,7 +696,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="sXu-SW-d8T">
-                                        <rect key="frame" x="0.0" y="324" width="348" height="120"/>
+                                        <rect key="frame" x="0.0" y="366" width="348" height="120"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Hy-Ii-ms3">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
@@ -731,7 +737,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="sM2-sO-kbf">
-                                        <rect key="frame" x="0.0" y="486" width="348" height="120"/>
+                                        <rect key="frame" x="0.0" y="516" width="348" height="120"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZq-KV-Itf">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
@@ -771,7 +777,21 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbd-f9-6HI">
+                                        <rect key="frame" x="0.0" y="666" width="348" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="Eod-Z6-XQ9" eventType="touchUpInside" id="xOh-dV-UdT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="p4N-94-i5c" secondAttribute="trailing" id="N6t-S8-uaX"/>
+                                    <constraint firstItem="p4N-94-i5c" firstAttribute="leading" secondItem="cB7-v9-yZI" secondAttribute="leading" id="Ukf-eK-6SW"/>
+                                    <constraint firstItem="rbd-f9-6HI" firstAttribute="leading" secondItem="cB7-v9-yZI" secondAttribute="leading" id="fNi-FJ-hMG"/>
+                                    <constraint firstAttribute="trailing" secondItem="rbd-f9-6HI" secondAttribute="trailing" id="pR6-bC-hjR"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dgq-B0-TKV"/>
@@ -783,6 +803,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JsJ-8X-KSP"/>
                     <connections>
+                        <outlet property="scoreLabel" destination="p4N-94-i5c" id="r9P-mb-B19"/>
                         <outletCollection property="cardButtonsTapped" destination="o4E-sW-hOg" collectionClass="NSMutableArray" id="xPn-sd-9Z2"/>
                         <outletCollection property="cardButtonsTapped" destination="JZu-Mh-O4L" collectionClass="NSMutableArray" id="9bH-nc-vgc"/>
                         <outletCollection property="cardButtonsTapped" destination="azR-VG-srO" collectionClass="NSMutableArray" id="N35-bB-6aU"/>
