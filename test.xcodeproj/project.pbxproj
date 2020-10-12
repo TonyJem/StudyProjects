@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A0EC12E2534AD6D00C0296F /* CardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EC12D2534AD6D00C0296F /* CardGameViewController.swift */; };
 		3A0EC1352534D0F300C0296F /* ShowGameResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EC1342534D0F300C0296F /* ShowGameResultViewController.swift */; };
+		3A0EC1382534D7A000C0296F /* ShowAllResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EC1372534D7A000C0296F /* ShowAllResultsVC.swift */; };
+		3A0EC13B2534D89700C0296F /* pointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EC13A2534D89700C0296F /* pointsCell.swift */; };
 		3A8F116325262C82002AA5C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F116225262C82002AA5C1 /* AppDelegate.swift */; };
 		3A8F116525262C82002AA5C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F116425262C82002AA5C1 /* SceneDelegate.swift */; };
 		3A8F116725262C82002AA5C1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F116625262C82002AA5C1 /* RootViewController.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		3A0EC12D2534AD6D00C0296F /* CardGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameViewController.swift; sourceTree = "<group>"; };
 		3A0EC1342534D0F300C0296F /* ShowGameResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGameResultViewController.swift; sourceTree = "<group>"; };
+		3A0EC1372534D7A000C0296F /* ShowAllResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllResultsVC.swift; sourceTree = "<group>"; };
+		3A0EC13A2534D89700C0296F /* pointsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pointsCell.swift; sourceTree = "<group>"; };
 		3A8F115F25262C82002AA5C1 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8F116225262C82002AA5C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8F116425262C82002AA5C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				C207C40A2531C51900EEEDCC /* WelcomeViewController.swift */,
 				3A0EC12D2534AD6D00C0296F /* CardGameViewController.swift */,
 				3A0EC1342534D0F300C0296F /* ShowGameResultViewController.swift */,
+				3A0EC1372534D7A000C0296F /* ShowAllResultsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				C207C4022530DAC300EEEDCC /* ReceiptTableCell.swift */,
+				3A0EC13A2534D89700C0296F /* pointsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,8 +197,10 @@
 				3A8F119E2530FA13002AA5C1 /* ImageEggViewController.swift in Sources */,
 				3A8F116325262C82002AA5C1 /* AppDelegate.swift in Sources */,
 				3A8F119C25308C39002AA5C1 /* ControlsViewController.swift in Sources */,
+				3A0EC13B2534D89700C0296F /* pointsCell.swift in Sources */,
 				3A8F116525262C82002AA5C1 /* SceneDelegate.swift in Sources */,
 				3A0EC12E2534AD6D00C0296F /* CardGameViewController.swift in Sources */,
+				3A0EC1382534D7A000C0296F /* ShowAllResultsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

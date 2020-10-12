@@ -11,6 +11,8 @@ class CardGameViewController: UIViewController {
     
     var lastSelectedCardIndex = -1
     
+    var savedResults = [Int]()
+    
     var matchedCards = 0 {
         didSet{
             checkResults ()
@@ -44,8 +46,19 @@ class CardGameViewController: UIViewController {
     
     func checkResults (){
         if matchedCards == cardsSymbols.count{
+            savedResults.append(curentScore)
             showResults()
+            resetCards()
         }
+    }
+    
+    func resetCards(){
+        curentScore = 0
+        for button in cardButtonsTapped {
+            button.setTitle("", for: .normal)
+            button.isEnabled = true
+        }
+        cardsSymbols.shuffle()
     }
     
     //    MARK: - Navigation
@@ -58,19 +71,22 @@ class CardGameViewController: UIViewController {
             // Pass the selected object to the new view controller.
             destinationVC.gameResult = self.curentScore
         }
+        
+        if segue.identifier == "ShowTableWithResultsSegue" {
+            // Get the new view controller using segue.destination.
+            let destinationVC = segue.destination as! ShowResultsInTableVC
+            
+            // Pass the selected object to the new view controller.
+            destinationVC.updatedResults = self.savedResults
+        }
+        
     }
-    
     
     
     //    MARK: - Actions
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
-        curentScore = 0
-        for button in cardButtonsTapped {
-            button.setTitle("", for: .normal)
-            button.isEnabled = true
-        }
-        cardsSymbols.shuffle()
+        resetCards()
     }
     
     
