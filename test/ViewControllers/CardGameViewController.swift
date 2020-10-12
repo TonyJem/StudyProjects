@@ -7,9 +7,15 @@ class CardGameViewController: UIViewController {
     
     
     //    MARK: - Properties
-    let cardsSymbols = ["🐶","🐱","🐭","🐰","🦊","🐸","🐶","🐱","🐭","🐰","🦊","🐸" ]
+    var cardsSymbols = ["🐶","🐱","🐭","🐰","🦊","🐸","🐶","🐱","🐭","🐰","🦊","🐸" ]
     
     var lastSelectedCardIndex = -1
+    
+    var matchedCards = 0 {
+        didSet{
+            checkResults ()
+        }
+    }
     
     var curentScore = 0 {
         didSet{
@@ -24,18 +30,47 @@ class CardGameViewController: UIViewController {
         setupCardAppearance()
         
         setScoreLabel()
-        
     }
     
+    
+    //    MARK: - Methods
     func setScoreLabel(){
         scoreLabel.text = "Score: \(curentScore)"
     }
+    
+    func showResults(){
+        performSegue(withIdentifier: "ShowGameResultVC_Segue", sender: nil)
+    }
+    
+    func checkResults (){
+        if matchedCards == cardsSymbols.count{
+            showResults()
+        }
+    }
+    
+    //    MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowGameResultVC_Segue" {
+            // Get the new view controller using segue.destination.
+            let destinationVC = segue.destination as! ShowGameResultViewController
+            
+            // Pass the selected object to the new view controller.
+            destinationVC.gameResult = self.curentScore
+        }
+    }
+    
     
     
     //    MARK: - Actions
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         curentScore = 0
+        for button in cardButtonsTapped {
+            button.setTitle("", for: .normal)
+            button.isEnabled = true
+        }
+        cardsSymbols.shuffle()
     }
     
     
@@ -61,6 +96,7 @@ class CardGameViewController: UIViewController {
                 sender.setTitle(selectedCardSymbol, for: .normal)
                 sender.isEnabled = false
                 curentScore += 3
+                matchedCards += 2
                 
             } else {
                 sender.setTitle(selectedCardSymbol, for: .normal)

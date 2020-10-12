@@ -816,11 +816,43 @@
                         <outletCollection property="cardButtonsTapped" destination="XZq-KV-Itf" collectionClass="NSMutableArray" id="4Rg-aP-ESg"/>
                         <outletCollection property="cardButtonsTapped" destination="O8T-PX-He0" collectionClass="NSMutableArray" id="I35-E2-8O4"/>
                         <outletCollection property="cardButtonsTapped" destination="Oh6-8X-qg6" collectionClass="NSMutableArray" id="cyo-03-jGN"/>
+                        <segue destination="7v2-u2-gts" kind="show" identifier="ShowGameResultVC_Segue" id="fwL-he-RRc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGg-63-nPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2635" y="2168"/>
+        </scene>
+        <!--Show Game Result View Controller-->
+        <scene sceneID="Smz-yU-o7I">
+            <objects>
+                <viewController id="7v2-u2-gts" customClass="ShowGameResultViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TsS-Dx-xlv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rd2-97-ukT">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f2w-c0-6b0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rd2-97-ukT" firstAttribute="centerY" secondItem="TsS-Dx-xlv" secondAttribute="centerY" id="GTC-or-TKO"/>
+                            <constraint firstItem="Rd2-97-ukT" firstAttribute="centerX" secondItem="TsS-Dx-xlv" secondAttribute="centerX" id="mMW-aD-1eW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xmw-If-bzj"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="Rd2-97-ukT" id="ZS5-6z-wFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ow8-MJ-JLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3396" y="2168"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="sIi-uN-fhu">
