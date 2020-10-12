@@ -13,6 +13,8 @@ class ReceiptsViewController: UIViewController, UITableViewDataSource, UITableVi
         UIImage(named: "redEgg"),
     ]
     
+    var destinationVC = ImageEggViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,17 +26,17 @@ class ReceiptsViewController: UIViewController, UITableViewDataSource, UITableVi
         receiptsTableView.reloadData()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "rowCellTappedSegue" {
-            if let indexPath = self.receiptsTableView.indexPathForSelectedRow {
-                let destinationVC = segue.destination as! ImageEggViewController
-                
-                if let selectedImage = receiptsImages[indexPath.row]{
-                    destinationVC.mainImage = selectedImage
-                }
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "rowCellTappedSegue" {
+//            if let indexPath = self.receiptsTableView.indexPathForSelectedRow {
+//                let destinationVC = segue.destination as! ImageEggViewController
+//
+//                if let selectedImage = receiptsImages[indexPath.row]{
+//                    destinationVC.mainImage = selectedImage
+//                }
+//            }
+//        }
+//    }
     
     // MARK: - TableSetup:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,5 +48,14 @@ class ReceiptsViewController: UIViewController, UITableViewDataSource, UITableVi
         let ImageInCurrentRow = receiptsImages[indexPath.row]
         receiptCell.receiptImage.image = ImageInCurrentRow
         return receiptCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Row Selected")
+        print(indexPath.row)
+        
+        if let selectedImage = receiptsImages[indexPath.row]{
+            destinationVC.mainImage = selectedImage
+        }
     }
 }
