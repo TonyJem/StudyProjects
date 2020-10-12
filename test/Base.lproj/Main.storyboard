@@ -831,9 +831,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rd2-97-ukT">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rd2-97-ukT">
+                                <rect key="frame" x="20" y="388" width="374" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -841,8 +841,9 @@
                         <viewLayoutGuide key="safeArea" id="f2w-c0-6b0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Rd2-97-ukT" firstAttribute="centerY" secondItem="TsS-Dx-xlv" secondAttribute="centerY" id="GTC-or-TKO"/>
-                            <constraint firstItem="Rd2-97-ukT" firstAttribute="centerX" secondItem="TsS-Dx-xlv" secondAttribute="centerX" id="mMW-aD-1eW"/>
+                            <constraint firstItem="Rd2-97-ukT" firstAttribute="leading" secondItem="f2w-c0-6b0" secondAttribute="leading" constant="20" id="mkO-5x-a9s"/>
+                            <constraint firstItem="f2w-c0-6b0" firstAttribute="trailing" secondItem="Rd2-97-ukT" secondAttribute="trailing" constant="20" id="q4R-to-Tca"/>
+                            <constraint firstItem="Rd2-97-ukT" firstAttribute="top" secondItem="f2w-c0-6b0" secondAttribute="top" constant="300" id="y0v-oV-kgb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xmw-If-bzj"/>
