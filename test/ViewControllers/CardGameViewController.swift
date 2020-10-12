@@ -1,7 +1,7 @@
 import UIKit
 
 class CardGameViewController: UIViewController {
-
+    
     
     @IBOutlet var cardButtonsTapped: [UIButton]!
     
@@ -13,14 +13,43 @@ class CardGameViewController: UIViewController {
         super.viewDidLoad()
         setupCardAppearance()
     }
-
-
-//    MARK: - Actions
+    
+    
+    //    MARK: - Actions
     
     @IBAction func cardTapAction(_ sender: UIButton) {
         let cardIndex = cardButtonsTapped.firstIndex(of: sender)!
         let selectedCardSymbol = cardsSymbols[cardIndex]
-        sender.setTitle(selectedCardSymbol, for: .normal)
+        
+        
+        
+        if lastSelectedCardIndex == -1 {
+            lastSelectedCardIndex = cardIndex
+            sender.setTitle(selectedCardSymbol, for: .normal)
+            sender.isEnabled = false
+        } else if lastSelectedCardIndex != cardIndex {
+            let lastCardSymbol = cardsSymbols[lastSelectedCardIndex]
+            
+            if lastCardSymbol == selectedCardSymbol {
+                sender.setTitle(selectedCardSymbol, for: .normal)
+                sender.isEnabled = false
+            } else {
+                sender.setTitle(selectedCardSymbol, for: .normal)
+                sender.isEnabled = false
+                
+                let lastCardIndex = lastSelectedCardIndex
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    sender.setTitle("", for: .normal)
+                    sender.isEnabled = true
+                    
+                    let lastCardButton = self.cardButtonsTapped[lastCardIndex]
+                    lastCardButton.setTitle("", for: .normal)
+                    lastCardButton.isEnabled = true
+                }
+            }
+            lastSelectedCardIndex = -1
+        }
     }
     
     
@@ -31,6 +60,6 @@ class CardGameViewController: UIViewController {
             button.layer.cornerRadius = 8
         }
     }
-   
+    
     
 }
