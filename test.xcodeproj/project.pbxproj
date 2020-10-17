@@ -11,6 +11,8 @@
 		3A0EC1352534D0F300C0296F /* ShowGameResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EC1342534D0F300C0296F /* ShowGameResultViewController.swift */; };
 		3A0EC1382534D7A000C0296F /* ShowAllResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EC1372534D7A000C0296F /* ShowAllResultsVC.swift */; };
 		3A0EC13B2534D89700C0296F /* pointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EC13A2534D89700C0296F /* pointsCell.swift */; };
+		3A0EC13E253B02D400C0296F /* EnterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EC13D253B02D400C0296F /* EnterDetailsViewController.swift */; };
+		3A0EC142253B069400C0296F /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EC141253B069400C0296F /* UserDetailsViewController.swift */; };
 		3A8F116325262C82002AA5C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F116225262C82002AA5C1 /* AppDelegate.swift */; };
 		3A8F116525262C82002AA5C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F116425262C82002AA5C1 /* SceneDelegate.swift */; };
 		3A8F116725262C82002AA5C1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F116625262C82002AA5C1 /* RootViewController.swift */; };
@@ -31,6 +33,8 @@
 		3A0EC1342534D0F300C0296F /* ShowGameResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGameResultViewController.swift; sourceTree = "<group>"; };
 		3A0EC1372534D7A000C0296F /* ShowAllResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllResultsVC.swift; sourceTree = "<group>"; };
 		3A0EC13A2534D89700C0296F /* pointsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pointsCell.swift; sourceTree = "<group>"; };
+		3A0EC13D253B02D400C0296F /* EnterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDetailsViewController.swift; sourceTree = "<group>"; };
+		3A0EC141253B069400C0296F /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		3A8F115F25262C82002AA5C1 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8F116225262C82002AA5C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8F116425262C82002AA5C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				3A0EC12D2534AD6D00C0296F /* CardGameViewController.swift */,
 				3A0EC1342534D0F300C0296F /* ShowGameResultViewController.swift */,
 				3A0EC1372534D7A000C0296F /* ShowAllResultsVC.swift */,
+				3A0EC13D253B02D400C0296F /* EnterDetailsViewController.swift */,
+				3A0EC141253B069400C0296F /* UserDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -200,6 +206,8 @@
 				3A0EC13B2534D89700C0296F /* pointsCell.swift in Sources */,
 				3A8F116525262C82002AA5C1 /* SceneDelegate.swift in Sources */,
 				3A0EC12E2534AD6D00C0296F /* CardGameViewController.swift in Sources */,
+				3A0EC13E253B02D400C0296F /* EnterDetailsViewController.swift in Sources */,
+				3A0EC142253B069400C0296F /* UserDetailsViewController.swift in Sources */,
 				3A0EC1382534D7A000C0296F /* ShowAllResultsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
